@@ -7,7 +7,7 @@ import Cart from "./pages/Cart"
 const App = () => {
   return (
     <div>
-      <div>
+      <div className='bg-slate-900'>
         <Navbar/>
       </div>
 
@@ -19,4 +19,4 @@ const App = () => {
   )
 }
 
-export default App 
+export default App;

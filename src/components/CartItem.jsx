@@ -13,20 +13,20 @@ const CartItem = ({item, itemIndex}) => {
         toast.error("Item removed from Cart")
     }
   return (
-    <div>
+    <div className='flex items-center justify-between gap-3 p-4 mt-10 ml-5 border-b-2 border-gray-300 rounded-lg'>
 
-        <div>
-            <img src={item.image} alt='ItemImage'/>
+        <div className='h-[180px] p-4'>
+            <img src={item.image} alt='ItemImage' className='object-contain w-full h-full'/>
         </div>
 
-        <div>
-            <h1>{item.title}</h1>
-            <h1>{item.description}</h1>
+        <div className='w-3/4'>
+            <h1 className='mt-1 font-semibold text-gray-700 text-md'>{item.title}</h1>
+            <h1 className='mt-3 text-gray font-normal text-[12px] text-left'>{item.description.split(" ").slice(0, 10).join(" ") + "..."}</h1>
 
-            <div>
-                <p>{item.price}</p>
+            <div className='flex justify-between mt-4'>
+                <p className='font-semibold text-green-600'>${item.price}</p>
                 <div>
-                    <AiFillDelete onClick={removeFromCart}/>
+                    <AiFillDelete onClick={removeFromCart} className='cursor-pointer'/>
                 </div>
             </div>
         </div>

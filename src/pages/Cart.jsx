@@ -15,14 +15,14 @@ const Cart = () => {
   }, [cart])
 
   return (
-    <div>
+    <div className='max-w-6xl mx-auto'>
 
       <div>
         {
           cart.length > 0 ? (
-            <div>
+            <div className='flex justify-evenly'>
 
-              <div>
+              <div className='w-1/2'>
                 {
                   cart.map((item, index) => {
                     return (
@@ -35,7 +35,7 @@ const Cart = () => {
               <div>
 
 
-                <div>
+                <div className='w-1/2'>
                   <div>Your Cart</div>
                   <div>Summary</div>
                   <p>
@@ -47,12 +47,12 @@ const Cart = () => {
                   <p>Total Amount: {totalAmount}</p>
                 </div>
               </div>
-            </div>
+           </div>
           ) : (
-          <div>
+          <div className='flex flex-col items-center justify-center mx-auto w-vw'>
             <h1>Cart Empty</h1>
             <Link to='/'>
-              <button>Shop Now</button>
+              <button className='px-3 py-1 text-white bg-green-700 rounded-md'>Shop Now</button>
             </Link>
           </div>
           )
